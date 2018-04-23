@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,51 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWB-Og-mv2">
+                                <rect key="frame" x="159" y="329" width="56" height="29"/>
+                                <color key="backgroundColor" red="0.65528649091720581" green="0.96009927988052368" blue="0.26963254809379578" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="kbv-ol-OHi"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="56" id="p2d-WC-vUx"/>
+                                </constraints>
+                                <state key="normal" title="Record"/>
+                                <connections>
+                                    <action selector="onClickRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N4N-pK-xjj"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Click the Record button" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ovh-kl-eTz">
+                                <rect key="frame" x="67" y="392" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="TKg-hG-2kS"/>
+                                    <constraint firstAttribute="width" constant="240" id="oAI-nr-PTs"/>
+                                </constraints>
+                                <color key="textColor" red="0.36571583151817322" green="0.22244718670845032" blue="0.077175818383693695" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ovh-kl-eTz" firstAttribute="top" secondItem="EWB-Og-mv2" secondAttribute="bottom" constant="34" id="HBN-FF-xnd"/>
+                            <constraint firstItem="EWB-Og-mv2" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="RbB-jw-Il0"/>
+                            <constraint firstItem="EWB-Og-mv2" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TSQ-oZ-bYI"/>
+                            <constraint firstItem="Ovh-kl-eTz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Wpe-CF-D7D"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="defaultTextField" destination="Ovh-kl-eTz" id="xDv-j6-GpT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="115.59220389805098"/>
         </scene>
     </scenes>
 </document>

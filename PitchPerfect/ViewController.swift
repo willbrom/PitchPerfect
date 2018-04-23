@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var defaultTextField: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,5 +23,8 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func onClickRecord(_ sender: Any) {
+        defaultTextField.text = "Yo mama so fat, when she walks past the TV, you miss 3 episodes of the show!"
+    }
 }
 
